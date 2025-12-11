@@ -72,10 +72,9 @@ app.post('/users', async (req, res, next) => {
 });
 
 // ERROR HANDLER
-app.use((err, req, res, next) => {
-  console.error(err);
-  res.status(500).json({ message: 'server error' });
-});
+app.use(cors({
+  origin: "https://app-react-gui.onrender.com"
+}));
 
 // PORT for Render (mandatory)
 const PORT = process.env.PORT || 8080;
