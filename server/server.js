@@ -73,8 +73,7 @@ app.post('/users', async (req, res, next) => {
 
 // ERROR HANDLER
 app.use(cors({
-  origin: "https://app-react-gui.onrender.com"
-}));
+  origin: "*"}));
 
 // PORT for Render (mandatory)
 const PORT = process.env.PORT || 8080;
